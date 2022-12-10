@@ -171,7 +171,7 @@ def user_stats(df):
 def main():
     df = CITY_DATA
     i = 0
-    while True:
+    while True:                 #loop to repeat the process of the main function
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
@@ -179,7 +179,7 @@ def main():
         station_stats(df)
         trip_duration_stats(df)
         user_stats(df)
-        while True:
+        while True:             #loop if the user wanted to show raw data
         	answer = input("would you like to see raw data? yes or no\n")
         	if answer.lower() != 'yes':
         		break
